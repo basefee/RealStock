@@ -6,7 +6,7 @@ const msftContractABI = require('../msftabi.json');
 const spyContractABI = require('../spyabi.json');
 const usdtContractABI = require("../usdtabi.json");
 
-const usdtContractAddress = '';
+const usdtContractAddress = '0x1e758656f3BA1ac562b6d93D08E2Ffe0Dbe347b0';
 
 import React, { useState, useEffect } from 'react';
 
@@ -23,10 +23,10 @@ const Form = () => {
 
   // Mapping stock symbols to their respective contract addresses and ABIs
   const stockContracts = {
-    AAPL: { address: "", abi: aaplContractABI },
-    AMZN: { address: "", abi: amznContractABI },
-    MSFT: { address: "", abi: msftContractABI },
-    SPY: { address: "", abi: spyContractABI },
+    AAPL: { address: "0x8F78e0fa1A25Eb313408C4c70EfA5c8aAb04556e", abi: aaplContractABI },
+    AMZN: { address: "0xD5C035A6e65f3F1445aca33c531B2545A0D3d744", abi: amznContractABI },
+    MSFT: { address: "0xb565656a18bd287a28C6aBEBBcbBdB54DDE37Eeb", abi: msftContractABI },
+    SPY: { address: "0xDd7E4d53570E998446576c1fFb3C53D2E9b5139F", abi: spyContractABI },
   };
 
   useEffect(() => {
