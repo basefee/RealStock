@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import FormHeader from "@/components/FormHeader";
+import Form from "@/components/Form";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
 
     <div className={`bg-black flex justify-center items-start`}>
       <div className={`xl:max-w-[1280px] w-full`}>
+        <Form />
       </div>
     </div>
 
