@@ -6,7 +6,7 @@ const msftContractABI = require('../msftabi.json');
 const spyContractABI = require('../spyabi.json');
 const usdtContractABI = require("../usdtabi.json");
 
-const usdtContractAddress = '0x1e758656f3BA1ac562b6d93D08E2Ffe0Dbe347b0';
+const usdtContractAddress = '0x1E758656f3Ba1aC562b6D93D08E2ffE0DbE347B0';
 
 import React, { useState, useEffect } from 'react';
 
@@ -23,10 +23,10 @@ const Form = () => {
 
   // Mapping stock symbols to their respective contract addresses and ABIs
   const stockContracts = {
-    AAPL: { address: "0x8F78e0fa1A25Eb313408C4c70EfA5c8aAb04556e", abi: aaplContractABI },
-    AMZN: { address: "0xD5C035A6e65f3F1445aca33c531B2545A0D3d744", abi: amznContractABI },
-    MSFT: { address: "0xb565656a18bd287a28C6aBEBBcbBdB54DDE37Eeb", abi: msftContractABI },
-    SPY: { address: "0xDd7E4d53570E998446576c1fFb3C53D2E9b5139F", abi: spyContractABI },
+    AAPL: { address: "0x8F78e0fa1a25eb313408C4C70EFa5C8AAB04556E", abi: aaplContractABI },
+    AMZN: { address: "0xD5c035A6e65F3F1445aCA33C531b2545a0D3d744", abi: amznContractABI },
+    MSFT: { address: "0xB565656a18bd287A28C6aBEBBcbBDB54DDe37eeb", abi: msftContractABI },
+    SPY: { address: "0xDD7e4D53570E998446576C1FFb3c53D2E9b5139f", abi: spyContractABI },
   };
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const Form = () => {
   const getUsdtBalance = async () => {
     try {
       const balance = await window.contract.s_USDTBalance(await signer.getAddress());
-      setBalance(balance.toString() / 1000000);
+      setBalance(balance.toString() / 1000000000000000000);
     } catch (error) {
       console.log(error);
     }
