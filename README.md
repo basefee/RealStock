@@ -6,7 +6,7 @@ Our project addresses a crucial gap in the current landscape of De-Fi on the blo
 
 By utilizing Gelato functions, our platform executes stock purchases off-chain, ensuring that the tokens you hold are genuinely backed by real stocks on the market. This enhances trust, transparency, and the overall value proposition of RWAs on-chain, effectively bridging the gap between traditional finance and blockchain technology.
 
-#### Currently Deployed on Ethereum Sepolia and Supports the Following Stocks:
+#### Currently Deployed on Rootstock and Supports the Following Stocks:
 - [AAPL](https://rootstock-testnet.blockscout.com/address/0x8F78e0fa1A25Eb313408C4c70EfA5c8aAb04556e)
 - [AMZN](https://rootstock-testnet.blockscout.com/address/0xD5C035A6e65f3F1445aca33c531B2545A0D3d744)
 - [MSFT](https://rootstock-testnet.blockscout.com/address/0xb565656a18bd287a28C6aBEBBcbBdB54DDE37Eeb)
@@ -17,7 +17,7 @@ By utilizing Gelato functions, our platform executes stock purchases off-chain, 
 #### The flow of the Dapp is as follows:-
 - Approve and deposit the suffcient amount of USDT to the contract.
 - Select the stock and the correct amount.
-- Pyth's price feed wraps the transaction with its oracle data.
+- Redstone's price feed wraps the transaction with its oracle data.
 - After calling the `buyRStock` function, a `BuyRequest` gets emmitted.
 - The event is picked up by Gelato's web3-function, which calls the Alpaca API to buy the respective stock in the exchange.
 - It then excutes the `mintRStock` function, which mints the directly backed ERC20 of the RWA on-chain.
@@ -64,3 +64,10 @@ Environment variables are needed for Web3 functions as they use the [Alpaca API]
 - **Buy Function**: Listens for `BuyRequest` events, interacts with the Alpaca API to purchase stock, and mints the corresponding ERC20 token to the trader.
 - **Sell Function**: Listens for `SellRequest` events, interacts with the Alpaca API to sell stock, and burns the corresponding ERC20 token from the trader.
 - **Market Function**: Manages pausing and unpausing of the contract based on market status.
+
+
+### It was a great experience building on Rootstock, its vast ecosystem provided us with tools like Gelato automation and Redstone oracle, which were key to this project. Only problem faced was the RPC was sometimes faulty.
+
+## Team
+ - **Garv Agarwal** - Proficient in Solidty and Backend web development
+  - **Gagan Tomar** - Frontend developer with a keen interest in blockchain technologies.
